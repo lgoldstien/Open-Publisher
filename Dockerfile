@@ -22,6 +22,12 @@ RUN echo "source /etc/profile.d/rvm.sh" >> /root/.bashrc
 # Jekyll
 RUN gem install --no-document jekyll
 
+# Kindlegen
+RUN curl -O \
+    http://kindlegen.s3.amazonaws.com/kindlegen_linux_2.6_i386_v2_9.tar.gz && \
+    tar -zxf kindlegen_linux_2.6_i386_v2_9.tar.gz && \
+    mv kindlegen /bin/kindlegen
+
 # Remove build dependancies
 RUN apk del \
     build-base \
