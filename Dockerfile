@@ -9,7 +9,8 @@ RUN apt-get install -y \
     build-essential \
     ca-certificates \
     curl \
-    git
+    git \
+    pandoc
 
 # Install ruby version manager and stable ruby version
 RUN gpg --keyserver hkp://keys.gnupg.net \
