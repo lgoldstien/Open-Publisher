@@ -1,5 +1,8 @@
 FROM ubuntu:trusty
 
+# Inject bash for a nicer shell integration
+RUN rm /bin/sh && cp /bin/bash /bin/sh
+
 # Install apt-getable dependancies
 RUN apt-get update
 RUN apt-get install -y \
