@@ -29,7 +29,7 @@ RUN curl -O \
     mv kindlegen /bin/kindlegen
 
 # Remove build dependancies
-RUN apk del \
-    build-base \
-    libffi-dev \
-    ruby-dev
+RUN apt-get purge -y \
+    build-essential \
+    git \
+    curl
