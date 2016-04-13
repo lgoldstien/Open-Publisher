@@ -9,8 +9,7 @@ RUN apt-get install -y \
     build-essential \
     ca-certificates \
     curl \
-    git \
-    libffi-dev
+    git
 
 # Install ruby version manager and stable ruby version
 RUN gpg --keyserver hkp://keys.gnupg.net \
