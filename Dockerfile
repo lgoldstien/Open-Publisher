@@ -1,14 +1,13 @@
-FROM alpine:3.3
+FROM ubuntu:trusty
 
-# Install jekyll dependancies
-RUN apk --update add \
-    build-base \
+# Install dependancies
+RUN apt-get update
+RUN apt-get install -y \
+    build-essential \
     ca-certificates \
+    curl \
     git \
-    libffi-dev \
-    ruby \
-    ruby-bundler \
-    ruby-dev
+    libffi-dev
 
 # Install jekyll
 RUN gem install --no-document jekyll
