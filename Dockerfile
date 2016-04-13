@@ -16,7 +16,7 @@ RUN apt-get install -y \
 RUN gpg --keyserver hkp://keys.gnupg.net \
     --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 RUN curl -sSL https://get.rvm.io | bash -s stable --ruby
-RUN echo "source /etc/profile.d/rvm.sh" >> /root/.bashrc
+RUN echo "source /etc/profile.d/rvm.sh" >> /etc/bash.bashrc
 
 # Install Open-Publisher dependancies
 # Jekyll
